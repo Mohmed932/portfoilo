@@ -30,6 +30,11 @@
     border-radius: 20px;
     color: var(--main-color);
 }
+.active i{
+    background-color: var(--main-color);
+    color: #fff;
+    border-radius: 20px;
+}
 @media (max-width:767px) {
     .Navbar-icons{
         position: fixed;

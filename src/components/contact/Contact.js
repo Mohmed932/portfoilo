@@ -82,7 +82,7 @@ const Contact = () => {
             </button>
             <button className='btn'>
               <a 
-              href="https://drive.google.com/file/d/11yKEm8rAMxtTuHMU0_MzIg-d8GBs91zV/view?usp=drivesdk" 
+              href="https://drive.google.com/file/d/14b_enbuLTcgxxLIhS9FpkpU15NvRrUa7/view?usp=drivesdk" 
               target="blank"
               style={{color:'#fff',textDecoration:'none'}}
               >
