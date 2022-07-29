@@ -1,0 +1,24 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+:root{
+    --main-color:green;
+    --shodow-color:#1e1e1e;
+    --man-color:#fff;
+}
+a{
+    text-decoration: none;
+    color:var(--main-color); 
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(13, 13, 13);
+}
+::selection{
+    background-color: var(--main-color);
+    color: var(--man-color);
+}
+h1,h3,h4,h5,p{
+    color: gray;
+}

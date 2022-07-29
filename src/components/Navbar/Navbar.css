@@ -1,0 +1,53 @@
+.Navbar{
+    background-color: red;
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.Navbar-icons{
+    position: fixed;
+    top: 0;
+    left:0;
+    bottom: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 40vh;
+    padding: 20px;
+    border-radius: 20px;
+    width: fit-content;
+}
+.Navbar i{
+    padding: 15px;
+    margin: 15px 0;
+    font-size: 20px;
+    border: 1px solid var(--main-color);
+    cursor: pointer;
+    border-radius: 20px;
+    color: var(--main-color);
+}
+@media (max-width:767px) {
+    .Navbar-icons{
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: -95vh;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        height:6vh;
+    }
+    .Navbar i{
+        margin: 0 15px;
+        padding: 5px;
+        font-size: 15px;
+        border: 1px solid var(--main-color);
+        cursor: pointer;
+        border-radius: 20px;
+        color: var(--main-color);
+    }
+}

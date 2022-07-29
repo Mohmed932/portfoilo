@@ -1,0 +1,130 @@
+.Certificates{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.Certificates-detales{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 70%;
+}
+.Certificates-title{
+    text-align: center;
+}
+.Certificates-desc{
+    text-align: center;
+    padding: 10px 90px;
+}
+.Certificates-image{
+    width:50%;
+    height: 50vh;
+    border-radius: 10px;
+}
+.Gool-alldetales{
+    width: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    overflow-y: hidden;
+    margin: 30px 30px;
+}
+.Gool-image{
+    width: 75%;
+}
+.Gool-detales{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 75%;
+}
+.Gool-detales-title{
+    font-size: 30px;
+}
+.fa-chevrons-down{
+    width: 50px;
+    height: 50px;
+}
+.Certificates-mover-image{
+    width: 100%;
+    height: 50vh;
+    margin-top: -80vh;
+    transition: 1s;
+}
+.Certificates-mover-image.add{
+    margin-top: 0;
+}
+.Certificates-mover{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+}
+.Certificates-span{
+    position: absolute;
+    width: 40%;
+    height: 4px;
+    background-color: var(--main-color);
+    border-radius: 50px;
+    transition: 1s;
+}
+.Certificates-span:first-child{
+    transform: rotate(-235deg);
+    right: 10px;
+}
+.Certificates-span:last-child{
+    transform: rotate(235deg);
+    left: 10px;
+}
+.Certificates-span.one{
+    transform: rotate(-130deg);
+}
+.Certificates-span.two{
+    transform: rotate(130deg);
+}
+@media (max-width:1000px) {
+    .Certificates-detales{
+        width: 90%;
+    }
+    .Gool-alldetales{
+        width: 95%;
+        margin: 10px 30px;
+    }
+    .Gool-detales-title{
+        font-size: 20px;
+    }
+}
+@media (max-width:676px) {
+    .Certificates-desc{
+        padding: 10px 10px;
+    }
+    .Certificates-image{
+        width:70%;
+        height: 50vh;
+    }
+}
+@media (max-width:600px) {
+    .Gool-image{
+        width: 100%;
+    }
+    .Gool-detales{
+        width: 100%;
+    }
+}
+@media (max-width:450px) {
+    .Certificates-image{
+        width:90%;
+        height: 40vh;
+    }
+    .Gool-detales-title{
+        font-size: 15px;
+    }
+}
