@@ -1,5 +1,4 @@
 .Navbar{
-    background-color: red;
     width: 10%;
     display: flex;
     align-items: center;
@@ -30,7 +29,12 @@
     border-radius: 20px;
     color: var(--main-color);
 }
-.active i{
+.active .fa-solid{
+    background-color: var(--main-color);
+    color: #fff;
+    border-radius: 20px;
+}
+.active .fa-brands{
     background-color: var(--main-color);
     color: #fff;
     border-radius: 20px;
