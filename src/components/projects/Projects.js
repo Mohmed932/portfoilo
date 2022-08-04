@@ -8,20 +8,17 @@ const Projects = () => {
   const Show = {
     offscreen:{
         opacity:0,
-        y:40
+        y:100
     },
     onscreen:{
         opacity:1,
         y:0,
-        transition:{
-            duration:1
-        }
     },
   }
   return (
     <div className='Projects'>
       <h1 className='Projects-title'>My Projects</h1>
-      {image.map(({title,id,img,desc,code,visit})=>(
+      {image.map(({title,id,desc,code,visit})=>(
         <div 
           className='Projects-main' 
           key={id}
@@ -29,11 +26,10 @@ const Projects = () => {
            <motion.div  
              className='Projects-detals'
              variants={Show}
-             initial={"offscreen"}
+             initial="offscreen"
              whileInView="onscreen"
-             viewport={{ once: true, amount: 0.8 }}
+             viewport={{ once: true}}
               >
-              <img className='Projects-img'  src={img}/>
                <h3 className='Projects-detals-title'>{title}</h3>
                <p className='Projects-desc'>{desc}</p>
                <div className='Projects-word'>
