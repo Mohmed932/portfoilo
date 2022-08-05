@@ -63,6 +63,9 @@
     width: 50%;
     height: 100%;
 }
+.Projects-detals:hover .fa-solid,h4,.Projects-desc {
+    color: #fff;
+}
 .Projects-detals-title{
     margin-top: 80px;
     text-align: center;
@@ -94,21 +97,6 @@
 }
 .Projects-code h4{
     margin: 30px 20px;
-}
-.fa-angle{
-    background-color: #fff;
-    padding: 10px;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    height: fit-content;
-}
-.fa-angle-right{
-    float:right;
-}
-.fa-angle-left{
-    float:left;
 }
 @media (max-width:1000px) {
     .Projects-detals{

@@ -5,10 +5,12 @@ import { BrowserRouter as Router ,Route,Routes} from 'react-router-dom'
 import Projects from './components/projects/Projects'
 import Contact from './components/contact/Contact'
 import Certificates from './components/certificates/Certificates'
+import LineTop from './components/LineTop/LineTop'
 
 const App = () => {
   return (
     <div className='App'>
+    <LineTop/>
        <Router>
            <Routes>
              <Route path='/' element={<Whome/>}/>

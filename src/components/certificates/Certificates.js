@@ -141,7 +141,7 @@ const Certificates = () => {
         className='Gool-alldetales'
        >
         <div className='Gool-detales'>
-           <h4 className='Gool-detales-title'>Competitor certificate from Udacity</h4>
+           <h4 className='Gool-detales-title'>React Nanodegree from Udacity</h4>
            <div className='Certificates-mover' onClick={handelrotateone}>
               <span className={rotateone?'Certificates-span one':'Certificates-span'}></span>
               <span className={rotateone?'Certificates-span two':'Certificates-span'}></span>

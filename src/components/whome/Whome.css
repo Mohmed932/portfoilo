@@ -51,6 +51,7 @@
 }
 .detales:hover .fa-angles-right{
     animation: lefttoright .8s infinite;
+    color: gray;
 }
 @keyframes lefttoright{
     0%{
