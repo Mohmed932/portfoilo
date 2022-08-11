@@ -2,6 +2,7 @@ import React from 'react'
 import './Whome.css'
 import {Link} from 'react-router-dom'
 import { motion } from 'framer-motion/dist/framer-motion'
+import Mohmed from '../../img/Mohmed.jpg'
 
 const Whome = () => {
   const Animation = {
@@ -82,7 +83,7 @@ const Whome = () => {
             animate="visible"
             className="parenthyper">
             <h1>Hey, I’m</h1>
-            <motion.img className='parenthyper-img' src="https://scontent.fcai20-5.fna.fbcdn.net/v/t39.30808-6/294482155_774031590450119_3149169569704181092_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeGEF1dYaGYIt8ZjDoPDtJj94jxu3Av5x8biPG7cC_nHxgcwtM0vdhNFxsLU9qhCGcC2kbJBEUgjJ-QtnL0Ffsq4&_nc_ohc=7EGt-jPlZuYAX8p8YEA&_nc_ht=scontent.fcai20-5.fna&oh=00_AT9k1haBeV8oJZqXKGu96AaUSaaZ3V5_g4UI9iF4Bp74tA&oe=62E6808B"/>
+            <motion.img className='parenthyper-img' src={Mohmed}/>
             <h1>Mohmed</h1>
          </motion.div>
          <motion.h1
