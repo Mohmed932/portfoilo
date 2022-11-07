@@ -1,7 +1,7 @@
 export const image = [
   {
     id: 0,
-    title: "bazar",
+    title: "Code blog",
     code: "https://github.com/Mohmed932/project-Code-blog-",
     visit: "https://project-code-blog.vercel.app/",
     desc:
