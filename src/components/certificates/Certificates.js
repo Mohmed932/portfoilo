@@ -1,163 +1,140 @@
-import React, { Fragment, useState } from 'react'
-import './Certificates.css'
-import { motion } from 'framer-motion/dist/framer-motion'
-import Challenger from '../../img/Challenger.jpg'
-import Nanodegree from '../../img/Nanodegree.jpg'
-import Mohmed from '../../img/Mohmed.jpg'
-import Navbar from '../Navbar/Navbar'
+import React, { Fragment, useState } from "react";
+import "./Certificates.css";
+import { motion } from "framer-motion/dist/framer-motion";
+import Mohmed from "../../img/Mohmed.jpg";
 
-const Certificates = () => {
-   const [rotate,setrotate] = useState(false)
-   const handelrotate = () => {
-       setrotate(!rotate)
-   }
-   const [rotateone,setrotateone] = useState(false)
-   const handelrotateone = () => {
-       setrotateone(!rotateone)
-   }
-   const Animation = {
-      hidden:{
-         opacity:0,
-         y:900,
+const Certificates = ({ Storage }) => {
+  const [toggle, settoggle] = useState(null);
+  const hendelToggle = (i) => {
+    toggle === i ? settoggle(null) : settoggle(i);
+  };
+  const data = [
+    {
+      Quest: "Competitor certificate from Udacity",
+      Answer:
+        " Create and style web components, Position and display website elements, Debug HTML and CSS code,Build a responsive website layout Build a website using WordPress ",
+    },
+    {
+      Quest: "React Nanodegree from Udacity",
+      Answer: `Learn the essential parts of the React ecosystem that are
+                essential to building production-ready applications, Managed to create modular and custom components that can be
+                reused throughout your web application., Learn about React Routers and how to create multiple routes on
+                your web application, making it more dynamic,  Learn about React lifecycle methods and how important they are
+                to web application performance and speed.`,
+    },
+  ];
+  const Animation = {
+    hidden: {
+      opacity: 0,
+      y: 900,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
       },
-      visible:{
-         opacity:1,
-         y:0,
-         transition:{
-            duration: .8,
-          }
-      }
-   }
-   const Animationdelay5 = {
-      hidden:{
-        opacity:0,
-        y:900,
+    },
+  };
+  const Animationdelay5 = {
+    hidden: {
+      opacity: 0,
+      y: 900,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        delay: 0.5,
       },
-      visible:{
-        opacity:1,
-        y:0,
-        transition:{
-          duration: .8,
-          delay:.5
-        }
-      }
-    }
-    const Animationdelay10 = {
-      hidden:{
-        opacity:0,
-        y:900,
+    },
+  };
+  const Animationdelay10 = {
+    hidden: {
+      opacity: 0,
+      y: 900,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        delay: 0.7,
       },
-      visible:{
-        opacity:1,
-        y:0,
-        transition:{
-          duration: .8,
-          delay:.7
-        }
-      }
-    }
-    const Animationdelay15 = {
-      hidden:{
-        opacity:0,
-        y:900,
+    },
+  };
+  const Animationdelay15 = {
+    hidden: {
+      opacity: 0,
+      y: 900,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        delay: 0.9,
       },
-      visible:{
-        opacity:1,
-        y:0,
-        transition:{
-          duration: .8,
-          delay:.9
-        }
-      }
-    }
-    const Animationdelay20 = {
-      hidden:{
-        opacity:0,
-        y:900,
-      },
-      visible:{
-        opacity:1,
-        y:0,
-        transition:{
-          duration: .8,
-          delay:1.2
-        }
-      }
-    }
+    },
+  };
   return (
     <Fragment>
-    <div className='Certificates'>
-      <div className='Certificates-detales'>
-         <motion.h1 
-          className='Certificates-title'
-          variants={Animation}
-          initial="hidden"
-          animate="visible"
-          >Certificates</motion.h1>
-         <motion.p 
-           className='Certificates-desc'
-           variants={Animationdelay5}
-           initial="hidden"
-           animate="visible"
-           >I attend many events such as the Egyptian Career Fair under the auspices of the Egyptian Ministry of Communications and I am working hard to increase my excellence
-         </motion.p>
-         <motion.img 
-           className='Certificates-image' 
-           variants={Animationdelay10}
-           initial="hidden"
-           animate="visible"
-           src={Mohmed}/>
-      </div>
-      <motion.div 
-         variants={Animationdelay15}
-         initial="hidden"
-         animate="visible"
-        className='Gool-alldetales'
-       >
-        <div className='Gool-detales'>
-           <h4 className='Gool-detales-title'>Competitor certificate from Udacity</h4>
-           <div className='Certificates-mover' onClick={handelrotate}>
-              <span 
-               className={rotate?'Certificates-span one':'Certificates-span'}
-               >
-              </span>
-              <span 
-               className={rotate?'Certificates-span two':'Certificates-span'}
-               >
-              </span>
-           </div>
-        </div>
-        <div className='Gool-image'>
-          <img 
-           className={rotate?'Certificates-mover-image add':'Certificates-mover-image'} 
-           src={Challenger}
-           />
-        </div>
-     </motion.div>
-      <motion.div 
-        variants={Animationdelay20}
-        initial="hidden"
-        animate="visible"
-        className='Gool-alldetales'
-       >
-        <div className='Gool-detales'>
-           <h4 className='Gool-detales-title'>React Nanodegree from Udacity</h4>
-           <div className='Certificates-mover' onClick={handelrotateone}>
-              <span className={rotateone?'Certificates-span one':'Certificates-span'}></span>
-              <span className={rotateone?'Certificates-span two':'Certificates-span'}></span>
-           </div>
-        </div>
-        <div className='Gool-image'>
-          <img 
-           className={rotateone?'Certificates-mover-image add':'Certificates-mover-image'}
-           src={Nanodegree}
+      <div className="Certificates">
+        <div className="Certificates-detales">
+          <motion.h1
+            className="Certificates-title"
+            variants={Animation}
+            initial="hidden"
+            animate="visible"
+          >
+            Certificates
+          </motion.h1>
+          <motion.p
+            className="Certificates-desc"
+            variants={Animationdelay5}
+            initial="hidden"
+            animate="visible"
+          >
+            I attend many events such as the Egyptian Career Fair under the
+            auspices of the Egyptian Ministry of Communications and I am working
+            hard to increase my excellence
+          </motion.p>
+          <motion.img
+            className="Certificates-image"
+            variants={Animationdelay10}
+            initial="hidden"
+            animate="visible"
+            src={Mohmed}
           />
         </div>
-     </motion.div>
-     <Navbar/>
-    </div>
+        <motion.div
+          variants={Animationdelay15}
+          initial="hidden"
+          animate="visible"
+          className="Certificates-cord"
+        >
+          {data.map(({ Quest, Answer }, i) => (
+            <div className="items" key={i}>
+              <div className="items-title" onClick={() => hendelToggle(i)}>
+                <h1>{Quest}</h1>
+                <span style={{ color: Storage }}>
+                  {toggle === i ? "-" : "+"}
+                </span>
+              </div>
+              <div
+                className={
+                  toggle === i ? "items-content show" : "items-content"
+                }
+              >
+                <p>{Answer}</p>
+              </div>
+            </div>
+          ))}
+        </motion.div>
+      </div>
     </Fragment>
-  )
-}
+  );
+};
 
-export default Certificates
+export default Certificates;

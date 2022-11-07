@@ -1,118 +1,118 @@
-.Projects{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+.Projects {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
-.Projects-main{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    position: relative;
+.Projects-main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
 }
-.Projects-title{
-    margin-top: 10vh;
-    color: #fff;
-    padding: 20px;
+.Projects-title {
+  margin-top: 10vh;
+  color: #fff;
+  padding: 20px;
 }
-.Projects-detals{
-    width: 40%;
-    height: 40vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: column;
-    overflow: hidden;
-    box-shadow: 0px 0px 9px var(--main-color);
-    border: 1px solid var(--main-color);
-    margin-bottom: 50px;
-    margin-top: 70px;
-    border-radius: 20px;
-    position: relative;
+.Projects-detals {
+  width: 40%;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  overflow: hidden;
+  margin-bottom: 50px;
+  margin-top: 70px;
+  border-radius: 20px;
+  position: relative;
 }
-.Projects-detals::before{
-    content: '';
-    position: absolute;
-    right:0;
-    bottom: 0;
-    width:0;
-    height:0;
-    transition: .4s;
-    z-index: -900;
-    background-color: var(--main-color);
+.Projects-detals::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  transition: 0.4s;
+  z-index: -900;
+  background-color: rgba(255, 255, 255, 0.062);
 }
-.Projects-detals::after{
-    content: '';
-    position: absolute;
-    left:0;
-    top: 0;
-    width:0;
-    height:0;
-    transition: .4s;
-    z-index: -900;
-    background-color: var(--main-color);
+.Projects-detals::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  transition: 0.4s;
+  z-index: -900;
+  background-color: rgba(255, 255, 255, 0.062);
 }
-.Projects-detals:hover::after{
-    width: 50%;
-    height: 100%;
+.Projects-detals:hover::after {
+  width: 100%;
+  height: 100%;
 }
-.Projects-detals:hover::before{
-    width: 50%;
-    height: 100%;
+.Projects-detals:hover::before {
+  width: 100%;
+  height: 100%;
 }
-.Projects-detals:hover .fa-solid,h4,.Projects-desc {
-    color: #fff;
+.Projects-detals:hover .fa-solid,
+h4,
+.Projects-desc {
+  color: #fff;
 }
-.Projects-detals-title{
-    margin-top: 80px;
-    text-align: center;
-    color: #fff;
+.Projects-detals-title {
+  margin-top: 80px;
+  text-align: center;
+  color: #fff;
 }
-.move{
-    display: flex;
-    width: 100%;
-    position: relative;
+.move {
+  display: flex;
+  width: 100%;
+  position: relative;
 }
-.Projects-desc{
-    text-align: center;
+.Projects-desc {
+  text-align: center;
 }
-.Projects-word{
-    display: flex;
-    align-items: center;
-    width: 100%;
+.Projects-word {
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
-.Projects-word a{
-    text-decoration: none;
-    color: var(--main-color);
+.Projects-word a {
+  text-decoration: none;
+  color: var(--main-color);
 }
-.Projects-code{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    cursor: pointer;
+.Projects-code {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  cursor: pointer;
 }
-.Projects-code h4{
-    margin: 30px 20px;
+.Projects-code h4 {
+  margin: 30px 20px;
 }
-@media (max-width:1000px) {
-    .Projects-detals{
-        width: 60%;
-    }
+@media (max-width: 1000px) {
+  .Projects-detals {
+    width: 60%;
+  }
 }
-@media (max-width:1000px) {
-    .Projects-detals{
-        width: 80%;
-    }
+@media (max-width: 1000px) {
+  .Projects-detals {
+    width: 80%;
+  }
 }
-@media (max-width:500px) {
-    .Projects-detals{
-        width: 90%;
-    }
-    .Projects-desc{
-        padding: 0 20px;
-    }
+@media (max-width: 500px) {
+  .Projects-detals {
+    width: 90%;
+  }
+  .Projects-desc {
+    padding: 0 20px;
+  }
 }
