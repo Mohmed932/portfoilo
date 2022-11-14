@@ -3,7 +3,7 @@ export const image = [
     id: 234,
     title: "Netflix",
     code: "https://github.com/Mohmed932/Netflix/tree/main/src",
-    visit: "https://netflix-vert-mu.vercel.app/move/675054",
+    visit: "https://netflix-vert-mu.vercel.app",
     desc:
       "watch the toprated And poular move made with tmdb",
   },
