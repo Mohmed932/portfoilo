@@ -1,12 +1,5 @@
 export const image = [
-    {
-    id: 278,
-    title: "translate",
-    code: "https://github.com/Mohmed932/translate",
-    visit: "https://translate-theta.vercel.app/",
-    desc:
-      "translate form any language to any language",
-  },
+  
         {
     id: 978,
     title: "Short Url",
