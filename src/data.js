@@ -1,6 +1,22 @@
 export const image = [
     {
     id: 278,
+    title: "Temp Mail",
+    code: "https://github.com/Mohmed932/temp-mail",
+    visit: "https://temp-mail-gamma.vercel.app/",
+    desc:
+      "temp mail for any website need to sign up"
+  },
+        {
+    id: 478,
+    title: "X-O game",
+    code: "https://github.com/Mohmed932/-x-o-with-react-js",
+    visit: "https://x-o-with-react-js.vercel.app/",
+    desc:
+      "X-O game by reactjs",
+  },
+        {
+    id: 288,
     title: "translate",
     code: "https://github.com/Mohmed932/translate",
     visit: "https://translate-theta.vercel.app/",
