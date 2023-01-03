@@ -8,6 +8,14 @@ export const image = [
       "temp mail for any website need to sign up"
   },
         {
+    id: 218,
+    title: "Quiz App",
+    code: "https://github.com/Mohmed932/Quiz-App",
+    visit: "https://quiz-app-two-hazel.vercel.app/",
+    desc:
+      "Quiz for front end devoloper"
+  },
+        {
     id: 478,
     title: "X-O game",
     code: "https://github.com/Mohmed932/-x-o-with-react-js",
