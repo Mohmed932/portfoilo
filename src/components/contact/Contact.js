@@ -1,139 +1,131 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./Contact.css";
-import { motion } from "framer-motion";
+import { motion } from "framer-motion/dist/framer-motion";
+import Mohmed from "../../img/Mohmed.jpg";
+import PDF from "../../img/_ Mahmed mahmoud Fouad (1).pdf";
 
-const Contact = () => {
-  const [name, setName] = useState(null);
-  const [email, setEmail] = useState(null);
-  const [message, setMessage] = useState(null);
-  const [validate, setValidate] = useState(null);
-  const [showbtn, setshowbtn] = useState(false);
-  const ValidateEmail = () => {
-    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
-      return setValidate(true);
-    }
-    return setValidate(false);
+const Contact = ({ Storage }) => {
+  const styles = { color: Storage };
+  const Animation = {
+    hidden: {
+      opacity: 0,
+      y: 900,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+      },
+    },
   };
-  const handelemail = (e) => {
-    setEmail(e);
-    ValidateEmail();
+  const Animationdelay5 = {
+    hidden: {
+      opacity: 0,
+      y: 900,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        delay: 0.5,
+      },
+    },
   };
-  useEffect(() => {
-    if (name !== null && email !== null && message !== null && !validate) {
-      setshowbtn(true);
-    } else {
-      setshowbtn(false);
-    }
-  }, [email, message, name]);
-  const handelClick = () => {
-    if (validate && name !== null && email !== null && message !== null) {
-      setName("");
-      setEmail("");
-      setMessage("");
-    }
+  const Animationdelay10 = {
+    hidden: {
+      opacity: 0,
+      y: 900,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        delay: 0.7,
+      },
+    },
   };
-
   return (
-    <motion.div
-      className="Contact-me"
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-    >
-      <h1>
-        CONTACT <span>ME</span>
-      </h1>
-      ;
-      <div className="Contact" id="five">
-        <motion.div
-          className="Contact-deal"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          <img
-            src="https://protfilo-by-js.vercel.app/image/Delivery.webp"
-            alt="deal"
-          />
-          <span>do free work</span>
-          <span>
-            I am available to work on my own. Contact me via and connect to my
-            account.
-          </span>
-          <div className="Contact-icon">
+    <div className="Contact">
+      <motion.h1
+        variants={Animation}
+        initial="hidden"
+        animate="visible"
+        className="Contect-title"
+      >
+        The Stage is Yours
+      </motion.h1>
+      <motion.p
+        variants={Animationdelay5}
+        initial="hidden"
+        animate="visible"
+        className="Contect-desc"
+      >
+        I’m always looking to collaborate on interesting projects with great
+        people. Need a supportive hand?
+      </motion.p>
+      <motion.div
+        variants={Animationdelay10}
+        initial="hidden"
+        animate="visible"
+        className="Contact-detales"
+        style={{ boxShadow: `0px 0px 9px ${Storage}` }}
+      >
+        <img className="Contact-image" src={Mohmed} />
+        <h1>Mohmed Mahmoud</h1>
+        <p>Front-End Developer</p>
+        <div className="Contact-me">
+          <button className="btn" style={{ border: `1px solid ${Storage}` }}>
             <a
-              href="https://www.facebook.com/Anamohmed135"
+              href="https:wa.me/+201157068530"
               target="blank"
-              className="Contact-icon-facebook"
+              style={{ color: "#fff", textDecoration: "none" }}
             >
-              <i class="fa-brands fa-facebook"></i>
+              Whatsapp
             </a>
-            <a href="https://twitter.com/Anamohmed00" target="blank">
-              <i class="fa-brands fa-twitter"></i>
-            </a>
+          </button>
+          <button className="btn" style={{ border: `1px solid ${Storage}` }}>
             <a
-              href="https://www.linkedin.com/in/mohmedmahmoudfouad"
+              href={PDF}
+              download
               target="blank"
+              onClick={() => this.click()}
+              style={{ color: "#fff", textDecoration: "none" }}
             >
-              <i class="fa-brands fa-linkedin"></i>
+              Download CV
             </a>
-            <a href="https://github.com/Mohmed932" target="blank">
-              <i class="fa-brands fa-github"></i>
-            </a>
-          </div>
-        </motion.div>
-        <motion.div
-          className="Contact-form"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9 }}
-        >
-          <form action="https://formspree.io/f/mvongvoe" method="post">
-            <div className="main-form">
-              <label for="name">Your Name</label>
-              <input
-                name="name"
-                id="name"
-                type="name"
-                onChange={(e) => setName(e.target.value)}
-                value={name}
-              />
-              {name === "" ? <span>you must enter you name</span> : ""}
-            </div>
-            <div className="main-form">
-              <label for="email">Your Email</label>
-              <input
-                name="Email"
-                id="email"
-                type="email"
-                onChange={(e) => handelemail(e.target.value)}
-                value={email}
-              />
-              {email === "" ? <span>you must enter you email</span> : ""}
-              {validate ? <span>you email is not invalid</span> : ""}
-            </div>
-            <div className="main-form">
-              <label for="message">Your Message</label>
-              <textarea
-                name="message"
-                id="message"
-                type="message"
-                className="Contact-message"
-                onChange={(e) => setMessage(e.target.value)}
-                value={message}
-              />
-              {message === "" ? <span>you must enter you name</span> : ""}
-            </div>
-            {showbtn ? (
-              <button type="submit" className="btn" onClick={handelClick}>
-                Submit
-              </button>
-            ) : (
-              ""
-            )}
-          </form>
-        </motion.div>
-      </div>
-    </motion.div>
+          </button>
+        </div>
+        <div className="scoial">
+          <a
+            href="https://www.facebook.com/Anamohmed135"
+            target="blank"
+            style={styles}
+          >
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a
+            href="https://twitter.com/Anamohmed00"
+            target="blank"
+            style={styles}
+          >
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/mohmedmahmoudfouad"
+            target="blank"
+            style={styles}
+          >
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/Mohmed932" target="blank" style={styles}>
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
+      </motion.div>
+    </div>
   );
 };
 

@@ -1,0 +1,91 @@
+.Whome {
+  width: 100%;
+  height: 100%;
+}
+.parenthyper-img {
+  width: 100px;
+  border-radius: 50%;
+  height: 100px;
+  margin: 0 35px;
+}
+.ChildWhome {
+  width: 70%;
+  height: 90%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.parenthyper {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.detales {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  cursor: pointer;
+  width: 48vw;
+  margin: 50px 0;
+  transition: 0.8s;
+}
+.Whome a {
+  text-decoration: none;
+  color: var(--main-color);
+}
+.fa-angles-right {
+  color: gray;
+}
+.detales:hover .fa-angles-right {
+  animation: lefttoright 0.8s infinite;
+}
+@keyframes lefttoright {
+  0% {
+    margin-right: 5px;
+  }
+  100% {
+    margin-right: -5px;
+  }
+}
+@media (max-width: 767px) {
+  .ChildWhome {
+    width: 90%;
+  }
+  .detales {
+    width: 80vw;
+  }
+}
+@media (max-width: 570px) {
+  .parenthyper h1 {
+    font-size: 22px;
+  }
+  .parenthyper-img {
+    margin: 0 15px;
+  }
+  .title-help {
+    font-size: 30px;
+  }
+}
+@media (max-width: 450px) {
+  .detales h3,
+  i {
+    font-size: 16px;
+  }
+  .title-help {
+    font-size: 24px;
+  }
+}
+@media (max-width: 350px) {
+  .parenthyper h1 {
+    font-size: 16px;
+  }
+}
