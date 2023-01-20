@@ -1,0 +1,82 @@
+.Home {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+  overflow: hidden;
+}
+.cricle {
+  position: absolute;
+  border-radius: 50%;
+  z-index: -100;
+  background-color: #4b82d4;
+}
+.cricle-one {
+  top: 15vh;
+  left: 90%;
+  width: 250px;
+  height: 250px;
+  opacity: 0.2 !important;
+}
+.cricle-two {
+  top: 0;
+  left: 18%;
+  width: 50px;
+  height: 50px;
+  opacity: 0.9 !important;
+}
+.cricle-three {
+  top: 50vh;
+  left: 45%;
+  width: 90px;
+  height: 90px;
+  opacity: 0.8 !important;
+}
+.Home-word {
+  width: 45%;
+  padding: 5%;
+}
+.Home-word h1 {
+  font-size: 50px;
+}
+.Home-word h1 span {
+  color: #0061f2;
+}
+.Home-word h3 {
+  margin: 30px 0;
+  font-size: 20px;
+}
+.Home-icon {
+  margin: 10px 0;
+  color: #222020;
+}
+.Home-img {
+  width: 35%;
+}
+@media (max-width: 1000px) {
+  .Home {
+    flex-direction: column;
+  }
+  .Home-word {
+    width: 80%;
+  }
+  .Home-img {
+    width: 60%;
+  }
+}
+@media (max-width: 600px) {
+  .Home-word {
+    width: 90%;
+  }
+  .Home-img {
+    width: 70%;
+  }
+  .Home-word h1 {
+    font-size: 35px;
+  }
+  .Home-img {
+    margin: 50px 0;
+  }
+}

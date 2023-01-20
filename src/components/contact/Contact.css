@@ -1,93 +1,110 @@
-.Contact {
-  width: 100%;
-  height: 100vh;
+.Contact-me {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  min-height: 100vh;
 }
-.Contact-detales {
-  width: 40%;
-  height: 60%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  border-radius: 30px;
-  margin-top: 20px;
-  box-shadow: 0px 0px 9px green;
-}
-.Contact-detales h1 {
-  color: #fff;
-  font-size: 24px;
-  padding: 10px;
-}
-.Contect-desc {
+.Contact-me h1 {
   text-align: center;
-  padding: 10px 30px;
+  font-size: 50px;
+  margin-top: 100px;
 }
-.Contact-detales p {
-  font-size: 24px;
+.Contact-me h1 span {
+  color: #4b82d4;
 }
-.Contact-image {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
+.Contact {
+  width: 85%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
 }
-.btn {
-  padding: 10px;
-  margin: 10px;
-  background-color: transparent;
-  color: #fff;
-  font-size: 20px;
-  position: relative;
-  z-index: 900;
+.Contact-deal,
+.Contact-form {
+  width: 50%;
+  min-height: 60vh;
+  padding: 50px;
+}
+.Contact-deal {
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
 }
-.btn::before {
-  position: absolute;
-  z-index: -90;
-  content: "";
-  width: 0;
-  height: 100%;
-  margin: -10px;
-  left: 0;
-  transition: 0.6s;
+.Contact-deal img {
+  border-radius: 20px;
+  width: 100%;
 }
-.btn:hover::before {
-  width: 110%;
-  background-color: rgba(255, 255, 255, 0.103);
+.Contact-deal span {
+  margin: 15px 0;
+  line-height: 1.5;
 }
-.scoial .fa-brands {
-  padding: 40px 10px;
-  font-size: 25px;
+.Contact-icon a {
+  padding: 0 10px;
+  font-size: 20px;
   cursor: pointer;
-  transition: 0.5s;
+  color: #000;
 }
-.scoial .fa-brands:hover {
-  color: #fff;
+.Contact-icon-facebook {
+  margin-left: -15px;
 }
-@media (max-width: 1000px) {
-  .Contact-detales {
-    width: 70%;
-  }
+.main-form {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  margin: 20px 0;
 }
-@media (max-width: 670px) {
-  .Contact-detales {
-    width: 80%;
-  }
+.main-form span,
+label {
+  margin: 5px 0;
 }
-@media (max-width: 500px) {
-  .Contact-detales {
+.main-form span {
+  color: red;
+}
+.main-form input,
+textarea {
+  width: 75%;
+  padding: 10px;
+  font-size: 20px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 100;
+  caret-color: #4b82d4;
+}
+.Contact-message {
+  min-height: 20vh;
+}
+
+@media (max-width: 1350px) {
+  .main-form input,
+  textarea {
     width: 90%;
   }
-  .Contect-title {
-    font-size: 30px;
+}
+@media (max-width: 1000px) {
+  .Contact {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .Contact-deal,
+  .Contact-form {
+    width: 65%;
+    margin: 0 30px;
+    padding: 50px;
   }
 }
-@media (max-width: 420px) {
-  .btn {
-    margin: 6px;
-    font-size: 16px;
+@media (max-width: 550px) {
+  .Contact-deal,
+  .Contact-form {
+    width: 95%;
+    margin: 0;
+    padding: 0;
+  }
+  .Contact-icon-facebook {
+    margin-left: 0;
+  }
+  .Contact-me h1 {
+    font-size: 35px;
+    margin-bottom: 50px;
   }
 }

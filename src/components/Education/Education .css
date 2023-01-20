@@ -1,0 +1,84 @@
+.Education {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+.Education h1 {
+  text-align: center;
+  margin: 50px 0;
+}
+.Education h1 span {
+  display: inline-block;
+  color: #0061f2;
+}
+.Education-container {
+  margin: 70px 0;
+}
+.main-Education {
+  display: flex;
+  padding: 0 100px;
+}
+.main-Education .main {
+  border-left: 2px solid #0061f2;
+}
+.main-Education .main span,
+h2,
+p {
+  margin: 25px;
+  font-weight: 200;
+}
+.main-Education p {
+  width: 70%;
+}
+strong {
+  color: #0061f2;
+  cursor: pointer;
+  display: inline-block;
+  margin: 25px;
+}
+strong i,
+a {
+  padding: 0 10px;
+  color: #0061f2;
+}
+.main-Education .main p {
+  line-height: 2;
+}
+.main-Education span {
+  position: relative;
+}
+.main-Education span::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -35px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #0061f2;
+}
+
+@media (max-width: 1000px) {
+  .main-Education {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+@media (max-width: 750px) {
+  .main-Education {
+    padding-left: 30px;
+  }
+  .main-Education .main span,
+  h2,
+  p {
+    font-size: 15px;
+    width: 100%;
+  }
+  .Education h1 {
+    font-size: 25px;
+  }
+  .main-Education .main h2 {
+    font-weight: 900;
+  }
+}

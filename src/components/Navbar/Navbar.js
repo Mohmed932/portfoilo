@@ -1,40 +1,41 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { Fragment, useState } from "react";
 import "./Navbar.css";
 
-const Navbar = ({ Storage, setStorage }) => {
-  const styles = {
-    border: `1px solid ${Storage}`,
-    color: `${Storage}`,
+import logo from "../assest/Mohmed.jpg";
+const Navbar = () => {
+  const word = ["Home", "About", "Education", "Project", "Contact"];
+  const Number = ["one", "two", "three", "four", "five"];
+  const [active, setActive] = useState(null);
+  const [mobile, setMobile] = useState(false);
+  const handelActive = ({ idx }) => {
+    active === idx ? setActive(null) : setActive(idx);
+    setMobile(false);
   };
-
+  const div = word.map((i, idx) => (
+    <Fragment key={idx}>
+      <a
+        href={`#${Number[idx]}`}
+        onClick={() => handelActive({ idx })}
+        className={active === idx ? "Navbar-active" : ""}
+      >
+        {i}
+      </a>
+    </Fragment>
+  ));
   return (
     <div className="Navbar">
-      <div className="Navbar-icons">
-        <NavLink to="/">
-          <i class="fa-solid fa-house" style={styles}></i>
-        </NavLink>
-        <NavLink to="/projects">
-          <i class="fa-regular fa-folder-open" style={styles}></i>
-        </NavLink>
-        <NavLink to="/Certificates">
-          <i class="fa-sharp fa-solid fa-graduation-cap" style={styles}></i>
-        </NavLink>
-        <NavLink to="/Contact">
-          <i class="fa-solid fa-phone" style={styles}></i>
-        </NavLink>
-        <label htmlFor="color">
-          <i
-            class="fa-sharp fa-solid fa-palette"
-            htmlFor="color"
-            style={styles}
-          ></i>
-        </label>
-        <input
-          type="color"
-          id="color"
-          onChange={(e) => setStorage(e.target.value)}
-        />
+      <img src={logo} alt="MohMed" />
+      <div className={mobile ? "Navbar-main mobile-show" : "Navbar-main"}>
+        <img src={logo} alt="MohMed" />
+        {div}
+      </div>
+      <div
+        className={mobile ? "Navbar-mobile mobile-active" : "Navbar-mobile"}
+        onClick={() => setMobile(!mobile)}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
     </div>
   );
